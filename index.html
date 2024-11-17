@@ -18,20 +18,24 @@
     />
   </head>
   <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
 
     <!-- Navigation Bar -->
 
     <header class="header">
+      <div class="scroll-indicator"></div>
       <a href="#home" class="logo"> Elevate<span>360</span> </a>
 
       <i class="bx bx-menu" id="menu-icon"></i>
 
       <nav class="navbar">
-        <a href="#home">Home </a>
+        <a href="#home" class="active">Home </a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <div class="nav-indicator"></div>
       </nav>
 
     </header>
@@ -61,19 +65,24 @@
           >See more about us <i class="bx bxs-chevrons-right"></i>
         </a>
 
+        <div class="cta-buttons">
+          <a href="#contact" class="btn primary-btn">Get Started</a>
+          <a href="#services" class="btn secondary-btn">Our Services</a>
+        </div>
+
       </div>
 
-      <div class="home-img">
+      <!-- <div class="home-img">
         <img src="assets/picture1.jpg" alt="" />
-      </div>
+      </div> -->
     </section>
 
     <!-- About Me Section -->
 
     <section class="about" id="about">
-      <div class="about-img">
+      <!-- <div class="about-img">
         <img src="assets/image.png" alt="" />
-      </div>
+      </div> -->
 
       <div class="about-content">
         <h2>About <span>us</span></h2>
@@ -99,23 +108,46 @@
             <i class="bx bx-bulb"></i>
             <h4>Paid Advertising</h4>
             <p>
-              Elevate360 enhances your online presence by creating and managing engaging content, growing your audience, and fostering brand loyalty across social platforms.            </p>
+              Elevate360 enhances your online presence through strategic paid advertising campaigns.
+            </p>
+            <ul class="service-features">
+              <li><i class="bx bx-check"></i> Facebook &amp; Instagram Ads</li>
+              <li><i class="bx bx-check"></i> Google Ads Management</li>
+              <li><i class="bx bx-check"></i> Performance Tracking</li>
+            </ul>
+            <a href="#contact" class="service-cta">Get Started</a>
           </div>
         </div>
+        
         <div class="service-box">
           <div class="service-info">
             <i class="bx bxl-instagram"></i>
             <h4>Social Media Management</h4>
             <p>
-              Elevate360 drives targeted traffic and maximizes ROI through tailored ad campaigns on platforms like Facebook, Instagram, and Google. We optimize every campaign to reach the right audience and boost conversions.            </p>
+              Elevate360 drives targeted traffic and maximizes ROI through tailored social media campaigns.
+            </p>
+            <ul class="service-features">
+              <li><i class="bx bx-check"></i> Content Creation</li>
+              <li><i class="bx bx-check"></i> Community Management</li>
+              <li><i class="bx bx-check"></i> Analytics &amp; Reporting</li>
+            </ul>
+            <a href="#contact" class="service-cta">Get Started</a>
           </div>
         </div>
+        
         <div class="service-box">
           <div class="service-info">
             <i class="bx bx-planet"></i>
             <h4>Web Development</h4>
             <p>
-              Elevate360 delivers custom, high-performance websites that enhance your brand’s online presence. Our sites are visually compelling, responsive, and optimized for a seamless user experience across all devices.            </p>
+              Elevate360 delivers custom, high-performance websites that enhance your brand's online presence.
+            </p>
+            <ul class="service-features">
+              <li><i class="bx bx-check"></i> Responsive Design</li>
+              <li><i class="bx bx-check"></i> SEO Optimization</li>
+              <li><i class="bx bx-check"></i> Custom Solutions</li>
+            </ul>
+            <a href="#contact" class="service-cta">Get Started</a>
           </div>
         </div>
       </div>
@@ -202,37 +234,78 @@
 
     <!-- Contact Form Section -->
 
+    <section class="testimonials" id="testimonials">
+      <h2 class="heading">What Our <span>Clients Say</span></h2>
+      
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            <i class="bx bxs-quote-left"></i>
+            <p>"Elevate360 transformed our online presence. Their strategic approach to social media management resulted in a 200% increase in engagement."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="assets/client1.jpg" alt="Client">
+            <div class="author-info">
+              <h4>Cashnuja Vanderwall</h4>
+              <p>Director, TicketVaultLK</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            <i class="bx bxs-quote-left"></i>
+            <p>"The web development team at Elevate360 delivered beyond our expectations. Our new website has significantly improved our conversion rates."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="assets/client2.jpg" alt="Client">
+            <div class="author-info">
+              <h4>Krithika Najumudeen</h4>
+              <p>Brand Manager, Soul&amp;Beat - Official</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Us</span></h2>
 
-      <form action="https://api.web3forms.com/submit" method="POST">
-
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="19952a92-d88f-439c-bc5d-367f501f2d78">
         <input type="hidden" name="subject" value="New Submission from Web3Forms">
         <input type="checkbox" name="botcheck" id="" style="display: none;">
 
-        <div class="input-group">
-          
-
-          <div class="input-box">
-            <input type="text" name="name" placeholder="Full Name" required/>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required/>
           </div>
 
-          <div class="input-box">
-            <input type="email" name= "email" placeholder="Email" required />
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required/>
           </div>
 
-          <div class="input-box">
-            <input type="number" name="number" placeholder="Phone Number" required/>
-            <input type="text" name="subject" placeholder="Subject" required />
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="number" required/>
           </div>
-          
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required/>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="Message" rows="6" required></textarea>
+          </div>
         </div>
 
-        <div class="input-group-2">
-          <textarea name="Message" id="" placeholder="Your Message" cols="30" rows="10" required></textarea>
-          <input type="submit" value="Send Message" class="btn" />
-        </div>
+        <button type="submit" class="btn submit-btn">
+          Send Message <i class="bx bx-send"></i>
+        </button>
       </form>
     </section>
 
